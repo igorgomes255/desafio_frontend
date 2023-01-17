@@ -57,22 +57,15 @@ const CalculatorProvider = ({ children }: IAuthProvider) => {
     api
       .post("", data)
       .then((response: AxiosResponse) => {
-        const tomorrow: any = Object.values(response.data)[0];
-        const fifteenDays: any = Object.values(response.data)[1];
-        const thirtyDays: any = Object.values(response.data)[2];
-        const ninetyDays: any = Object.values(response.data)[3];
-
-        setTomorrow(tomorrow);
-        setFifteenDays(fifteenDays);
-        setThirtyDays(thirtyDays);
-        setNinetyDays(ninetyDays);
+        setTomorrow(response.data[1]);
+        setFifteenDays(response.data[15]);
+        setThirtyDays(response.data[30]);
+        setNinetyDays(response.data[90]);
       })
       .catch((err: AxiosError) => {
         console.log(err);
       });
   };
-
-  console.log(tomorrow);
 
   return (
     <CalculatorContext.Provider
