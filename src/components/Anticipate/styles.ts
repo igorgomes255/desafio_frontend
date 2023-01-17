@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 600px;
-  height: 350px;
+  height: 370px;
   border: 1px solid #d1dce3;
   border-radius: 4px;
 
@@ -13,6 +13,7 @@ export const Container = styled.div`
     color: #656565;
     font-size: 24px;
     font-family: "Source Sans Pro";
+    margin-bottom: 30px;
   }
 
   label {
@@ -24,4 +25,8 @@ export const Container = styled.div`
 
 export const DivMargin = styled.div`
   margin-left: 56px;
+`;
+
+export const DivInput = styled.div`
+  margin-top: 15px;
 `;

@@ -1,6 +1,6 @@
 import Input from "../Input";
 import ReceiveBox from "../Receive box";
-import { Container, DivMargin } from "./styles";
+import { Container, DivMargin, DivInput } from "./styles";
 
 const Anticipate = () => {
   return (
@@ -8,20 +8,20 @@ const Anticipate = () => {
       <DivMargin>
         <h1>Simule sua Antecipação</h1>
 
-        <div>
+        <DivInput>
           <label>Informe o valor da venda *</label>
           <Input />
-        </div>
+        </DivInput>
 
-        <div>
+        <DivInput>
           <label>Em quantas parcelas *</label>
           <Input />
-        </div>
+        </DivInput>
 
-        <div>
+        <DivInput>
           <label>Informe o percentual de MDR *</label>
           <Input />
-        </div>
+        </DivInput>
       </DivMargin>
       <ReceiveBox />
     </Container>

@@ -5,5 +5,5 @@ export const Container = styled.input`
   height: 38px;
   border-radius: 4px;
 
-  border-color: #dde6e9;
+  border: 1px solid #dde6e9;
 `;
