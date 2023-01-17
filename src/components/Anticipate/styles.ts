@@ -21,6 +21,14 @@ export const Container = styled.div`
     font-size: 18px;
     font-family: "Source Sans Pro";
   }
+
+  form {
+    input[type="submit"] {
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+    }
+  }
 `;
 
 export const DivMargin = styled.div`
@@ -29,4 +37,12 @@ export const DivMargin = styled.div`
 
 export const DivInput = styled.div`
   margin-top: 15px;
+
+  input {
+    width: 230px;
+    height: 38px;
+    border-radius: 4px;
+
+    border: 1px solid #dde6e9;
+  }
 `;

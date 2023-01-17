@@ -20,6 +20,10 @@ export const Container = styled.div`
       font-style: italic;
     }
 
+    li {
+      list-style-type: none;
+    }
+
     p {
       color: #5d9cec;
       font-size: 16px;
