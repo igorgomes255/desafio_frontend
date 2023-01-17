@@ -9,6 +9,7 @@ import {
   UseFormHandleSubmit,
   UseFormRegister,
 } from "react-hook-form/dist/types";
+import { toast } from "react-toastify";
 
 interface IAuthProvider {
   children: ReactNode;
@@ -40,9 +41,9 @@ const CalculatorProvider = ({ children }: IAuthProvider) => {
   const [ninetyDays, setNinetyDays] = useState<number>(0);
 
   const schema = yup.object().shape({
-    amount: yup.number().required("* Campo obrigatório"),
-    installments: yup.number().required("* Campo obrigatório"),
-    mdr: yup.number().required("* Campo obrigatório"),
+    amount: yup.string().required("Campo obrigatório"),
+    installments: yup.string().required("Campo obrigatório"),
+    mdr: yup.string().required("Campo obrigatório"),
   });
 
   const {
@@ -64,6 +65,9 @@ const CalculatorProvider = ({ children }: IAuthProvider) => {
       })
       .catch((err: AxiosError) => {
         console.log(err);
+        toast.error("Não é possível parcelar mais de 12 vezes", {
+          theme: "dark",
+        });
       });
   };
 
