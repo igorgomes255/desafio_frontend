@@ -13,16 +13,16 @@ const ReceiveBox = () => {
 
         <li>
           <p>
-            Amanhã: <span>R$ {tomorrow ? tomorrow : 0},00</span>
+            Amanhã: <span>R$ {tomorrow},00</span>
           </p>
           <p>
-            Em 15 dias: <span>R$ {fifteenDays ? fifteenDays : 0},00</span>
+            Em 15 dias: <span>R$ {fifteenDays},00</span>
           </p>
           <p>
-            Em 30 dias: <span>R$ {thirtyDays ? thirtyDays : 0},00</span>
+            Em 30 dias: <span>R$ {thirtyDays},00</span>
           </p>
           <p>
-            Em 90 dias: <span>R$ {ninetyDays ? ninetyDays : 0},00</span>
+            Em 90 dias: <span>R$ {ninetyDays},00</span>
           </p>
         </li>
       </div>
